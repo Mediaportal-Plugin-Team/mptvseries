@@ -505,20 +505,23 @@ namespace WindowPlugins.GUITVSeries
                         break;
 
                     case ParsingAction.UpdateUserRatings:
-                        if (DBOption.GetOptions(DBOption.cOnlineParseEnabled) == 1)
-                            UpdateOnlineMirror();
-                        if (DBOnlineMirror.IsMirrorsAvailable)
-                        {
-                            tUserRatings = new BackgroundWorker();
-                            UpdateUserRatings(tUserRatings);
-                        }
+                        //// // Currently not supported (must now use v4 API but user will need to pay yearly subscription)
+                        //if ( DBOption.GetOptions(DBOption.cOnlineParseEnabled) == 1)
+                        //      UpdateOnlineMirror();
+                        //  if (DBOnlineMirror.IsMirrorsAvailable)
+                        //  {
+                        //      tUserRatings = new BackgroundWorker();
+                        //      UpdateUserRatings(tUserRatings);
+                        //  }
                         break;
 
+                    
                     case ParsingAction.UpdateUserFavourites:
-                        if (DBOption.GetOptions(DBOption.cOnlineParseEnabled) == 1)
-                            UpdateOnlineMirror();
-                        if (DBOnlineMirror.IsMirrorsAvailable)
-                            UpdateUserFavourites();
+                        // Currently not supported (must now use v4 API but user will need to pay yearly subscription)
+                        //if (DBOption.GetOptions(DBOption.cOnlineParseEnabled) == 1)
+                        //    UpdateOnlineMirror();
+                        //if (DBOnlineMirror.IsMirrorsAvailable)
+                        //    UpdateUserFavourites();
                         break;
 
                     case ParsingAction.UpdateEpisodeCounts:
