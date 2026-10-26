@@ -328,6 +328,7 @@
     <Compile Include="TmdbAPI\DataStructures\TmdbShowImages.cs" />
     <Compile Include="TmdbAPI\Extensions\JsonExtensions.cs" />
     <Compile Include="TmdbAPI\TmdbAPI.cs" />
+    <Compile Include="TmdbAPI\TmdbCredentials.cs" />
     <Compile Include="TmdbAPI\TmdbURIs.cs" />
     <Compile Include="Translation.cs" />
     <Compile Include="TVSeriesPlugin.cs" />
