@@ -256,7 +256,7 @@ namespace WindowPlugins.GUITVSeries
                 {
                     #region Hide Personal Info
                     entry = entry.Replace( DBOnlineMirror.LegacyAPIKey, "<apikey>" );
-                    entry = entry.Replace( TmdbURIs.ApiKey, "<apiKey>" );
+                    entry = entry.Replace( TmdbCredentials.ApiKey, "<apiKey>" );
                     #endregion
 
                     string sPrefix = CreatePrefix(level);
