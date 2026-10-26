@@ -42,12 +42,19 @@ IF DEFINED TVDB_API_KEY (
   "Tools\Tools\sed.exe" -i -r "s/SECRET_PLACEHOLDER_TVDB_API_KEY/%TVDB_API_KEY%/g" "MP-TVSeries\Online Parsing Classes\Credentials.cs"
 )
 
+REM TMDB API Key
+IF DEFINED TMDB_API_KEY (
+  ECHO [INFO] TMDB API Key found...
+  "Tools\Tools\sed.exe" -i -r "s/SECRET_PLACEHOLDER_TMDB_API_KEY/%TMDB_API_KEY%/g" "MP-TVSeries\TmdbAPI\TmdbCredentials.cs"
+)
+
 :: Build
 "%MSBUILD_PATH%" /target:Rebuild /property:Configuration=RELEASE /property:Platform=%ARCH% /fl /flp:logfile=MP-TVSeries.log;verbosity=diagnostic MP-TVSeries.sln
 
 :: Revert version
 git checkout "MP-TVSeries\Properties\AssemblyInfo.cs"
 git checkout "MP-TVSeries\Online Parsing Classes\Credentials.cs"
+git checkout "MP-TVSeries\TmdbAPI\TmdbCredentials.cs"
 
 CD build
 
